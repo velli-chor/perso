@@ -1,0 +1,84 @@
+.fiche {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.fiche *,
+.fiche *::before,
+.fiche *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Bloc 1 : titre ---------- */
+.fiche-bloc1 {
+  text-align: center;
+  padding: 0 0 8px;
+}
+
+.fiche-titre {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.fiche-soustitre {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* ---------- Blocs 2 et 3 (en ligne) ---------- */
+.fiche-bloc2,
+.fiche-bloc3 {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+
+.fiche-bloc2 { height: 320px; }
+.fiche-bloc3 { height: 150px; }
+
+/* Texte = 60%, image = 40% */
+.fiche-bloc2 .fiche-texte,
+.fiche-bloc3 .fiche-texte { flex: 3; }
+
+.fiche-bloc2 .fiche-image,
+.fiche-bloc3 .fiche-image { flex: 2; }
+
+/* ---------- Bloc 4 ---------- */
+.fiche-bloc4 {
+  min-height: 300px;
+  display: flex;
+}
+
+.fiche-bloc4 .fiche-texte { flex: 1; }
+
+/* ---------- Éléments communs ---------- */
+.fiche-texte {
+  padding: 15px;
+  overflow: auto;
+  text-align: justify;
+}
+
+.fiche-image {
+  overflow: hidden;
+}
+
+.fiche-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Couleurs ---------- */
+.fiche-bloc2 .fiche-texte,
+.fiche-bloc2 .fiche-image { background: #f088b4; }
+
+.fiche-bloc3 .fiche-texte,
+.fiche-bloc3 .fiche-image { background: #b786f0; }
+
+.fiche-bloc4 .fiche-texte { background: #87c2ee; }
