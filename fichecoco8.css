@@ -1,0 +1,101 @@
+.fiche {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.fiche *,
+.fiche *::before,
+.fiche *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Bloc 1 : titre ---------- */
+.fiche-bloc1 {
+  text-align: center;
+  padding: 0 0 8px;
+}
+
+.fiche-titre {
+  font-size: 28px;
+  font-family: 'WindSong';
+  font-weight: 400;
+  font-style: italic;
+  line-height: 0.9;
+}
+
+.fiche-soustitre {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Playfair Display';
+}
+
+/* ---------- Cadre commun (texte + image) ---------- */
+.fiche-texte,
+.fiche-image {
+  margin: 0 auto 16px;
+  background-color: var(--neutralDarker2);
+  border: 3px solid var(--neutralDark);
+  outline: 1px solid var(--neutralDarker3);
+  padding: 0px 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--textColor);
+}
+
+/* ---------- Texte ---------- */
+.fiche-texte {
+  font-size: 12px;
+  line-height: 1.9;
+  text-align: justify;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ---------- Image ---------- */
+.fiche-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.fiche-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Blocs 2 et 3 (en ligne) ---------- */
+.fiche-bloc2,
+.fiche-bloc3 {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.fiche-bloc2 .fiche-texte,
+.fiche-bloc3 .fiche-texte {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Bloc 2 : image 200 x 320 (+ 3px de bordure de chaque côté) */
+.fiche-bloc2 .fiche-image { width: 206px; height: 326px; flex: none; }
+.fiche-bloc2 .fiche-texte { height: 326px; }
+
+/* Bloc 3 : l'image remplit son cadre */
+.fiche-bloc3 .fiche-image { width: 206px; height: 156px; flex: none; }
+.fiche-bloc3 .fiche-texte { height: 156px; }
+
+/* ---------- Bloc 4 ---------- */
+.fiche-bloc4 .fiche-texte {
+  height: 300px;
+}
+
+/* ---------- Bloc 5 ---------- */
+.fiche-bloc5 .fiche-texte {
+  height: 120px;
+}
